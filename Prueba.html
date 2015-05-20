@@ -4,39 +4,187 @@
         <title>Taller Prueba</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" href="css/estilo.css" />
+      <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+         <link rel="stylesheet" href="jquery/themes/temaulas.css" />
+         
+         
+       
+     
+        <link rel="stylesheet" href="jquery/themes/temaulas.css" />
+        <link rel="stylesheet" href="jquery.mobile.structure-1.4.5.css" />
+        <link rel="stylesheet" href="jquery.mobile.icons.min.css" />
         <script src="jquery/jquery-1.11.1.min.js"></script>
         <script src="jquery/jquery.mobile-1.4.5.min.js" ></script>
+        
+         <link rel="stylesheet" type="text/css" href="easytabs/css/easy-responsive-tabs.css " />
+        <script src="easytabs/js/jquery-1.9.1.min.js"></script>
+        <script src="easytabs/js/easyResponsiveTabs.js"></script>
         </head>
+        
+        
+        
+       
+       
         <body>
-            <div data-role="page" id="inicio">
-                <header data-role= "header" data-position="fixed">
-                    <h1>Aplicaci&oacuten</h1>
+            <div data-role="page" id="inicio" data-theme="a">
+                <header data-role= "header" data-position="fixed" id="cabeza">
+                    <h1 id="texto_cabeza">Aulas Uniminuto</h1>
                 </header>
+                <article data-role="article" data-position="fixed" id="tabla_art">
+                    
+                   <h2 id="textosimp"> Bienvenido/a a la aplicaci&oacuten Aulas Uniminuto, donde podr&aacute detallar 
+                    la disponibilidad de las aulas.</h2>
+                    
+                    
+                </article>
                 
-                <button class="ui-btn ui-corner-all"> <a href="#inicio">Inicio</a></button>
-                <a href="#pagina2" class="ui-btn ui-corner-all">Pagina 2</a>
+                <a href="#pagina2" class="ui-btn ui-corner-all" id="boton">Ingresar</a>
+                <br>
+                <div class="crop-img"  style="width: 150px;">
+  <img style="width: 100%; margin:0 0 30% 0;_margin-bottom:10px;" src="img/menu2.png ">
+</div>
                 
-                <footer data-role= "footer" data-position="fixed">
-                     <button class="ui-btn ui-shadow ui-corner-all ui-icon-camera ui-btn-icon-right ">camera</button>
-                </footer>
+
                 
             </div><!--cierre página 1! -->            
             
             
-            <div data-role="page" id="pagina2">
-                <header data-role= "header" data-position="fixed">
-                    <h1>Aplicaci&oacuten</h1>
+            <div data-role="page" id="pagina2" data-theme="a">
+                <header data-role= "header" data-position="fixed" id="cabeza">
+                    <h1 id="texto_cabeza">Aulas Uniminuto</h1>
                 </header>
-                <a href="#inicio" class="ui-btn ui-corner-all">Inicio</a>
-                
-                    <img  id="#imagen" src="img/imagen.gif" />
+                <article data-role="article" data-position="fixed" id="tabla_art">
                     
-                <footer data-role= "footer" data-position="fixed">
-                     <button class="ui-btn ui-shadow ui-corner-all ui-icon-camera ui-btn-icon-right ">camera</button>
-                </footer>
+                   <h3 id="textosimp"> Seleccione que tipo de aula necesita.</h3>
+                </article>
+           
+          
+
+        
+        <!--Horizontal Tab-->
+                    <div id="parentHorizontalTab">
+                        <ul class="resp-tabs-list hor_1">
+                        <li>Equipos normales</li>
                 
-            </div><!--cierre página 2! -->       
+                        <li>Equipos de diseño</li>
+                        <li>Diseño industrial</li>
+                        </ul>
+                    <div class="resp-tabs-container hor_1">
+                        <div>
+                            <p>
+                        <!--vertical Tabs-->
+
+                        
+                        </p>
+                        <p>Equipos con programas básicos de Office.</p>
+                           <form>
+                            <label>
+                            <input type="radio" name="radio-choice-0" id="elecciona">
+                            </label>
+                            </form>
+                    </div>
+                <div>
+                   
+                   
+                    <p>Suite de Adobe y modelado 3d.</p>
+                     <form>
+<label>
+<input type="radio" name="radio-choice-0" id="eleccionb">
+</label>
+</form>
+                    
+                </div>
+                <div>
+                    
+                    <p>Autodesk</p>
+                     <form>
+<label>
+<input type="radio" name="radio-choice-0" id="eleccionc">
+</label>
+</form>
+                </div>
+            </div>
+        </div>
+        <div id="nested-tabInfo">
+            
+       
+          
+            
+            <br>
+            <br>
+            
+            
+           
+            
+
+<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#F6E205', // background color for active tabs in this group
+            inactive_bg: '#F6E205', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+
+  <a href="seleccion.html" class="ui-btn ui-corner-all" id="boton1">Enviar</a>
+
+                
+                <div class="crop-img"  style="width: 150px;">
+  <img style="width: 100%; margin:0 0 30% 0;_margin-bottom:10px;" src="img/pc.png">
+</div>
+
+ <div class="crop-img"  style="width: 35px;">
+   <a href="#inicio" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
+
+</div>
+                
+            </div><!--cierre página 2! -->   
+            
+            
+             
+            
+            
+         
         </body>
     
 </html>

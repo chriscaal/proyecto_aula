@@ -1,0 +1,30 @@
+#inicio {
+ background-image:url("img/fondos.jpg");
+}
+/* No puedo poner el fondo :( */
+#cabeza{
+    background-color:#E0F8F7;
+    
+    
+    }
+#imagen{
+    margin:0px 0px 0px 80px; 
+    background-image: url("img/menu2.png");
+}    
+#texto_cabeza{
+        color:#000000;}
+
+#tabla_art{
+    margin:110px 40px;
+    
+    
+    }
+#textosimp{
+    color:#0B2161;
+    text-align:center;}
+    
+    
+#boton{
+    margin:0px 0px 0px 0px;
+    background-color:yellow;
+    ;}
