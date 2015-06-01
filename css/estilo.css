@@ -1,24 +1,20 @@
 @font-face {
     font-family: 'alegreya_sans_scbold';
-    src: url('alegreyasanssc-bold-webfont.eot');
-    src: url('alegreyasanssc-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('alegreyasanssc-bold-webfont.woff2') format('woff2'),
-         url('alegreyasanssc-bold-webfont.woff') format('woff'),
-         url('alegreyasanssc-bold-webfont.ttf') format('truetype'),
-         url('alegreyasanssc-bold-webfont.svg#alegreya_sans_scbold') format('svg');
+    src: url('../fonts/alegreyasanssc-bold-webfont.eot');
+    src: url('../fonts/alegreyasanssc-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alegreyasanssc-bold-webfont.woff2') format('woff2'),
+         url('../fonts/alegreyasanssc-bold-webfont.woff') format('woff'),
+         url('../fonts/alegreyasanssc-bold-webfont.ttf') format('truetype'),
+         url('../fonts/alegreyasanssc-bold-webfont.svg#alegreya_sans_scbold') format('svg');
     font-weight: normal;
     font-style: normal;
 } 
-#Textos{
-	font-family: 'alegreya_sans_scbold';
-	font-size:18px;
-}
 
 
 #inicio {
  background-image:url("img/fondos.jpg");
 }
-/* No puedo poner el fondo :( */
+
 #cabeza{
     background-color:#E0F8F7;
     
